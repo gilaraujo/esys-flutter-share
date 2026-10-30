@@ -1,10 +1,11 @@
 import Flutter
 import UIKit
 
-public class SwiftEsysFlutterSharePlugin: NSObject, FlutterPlugin {
+@objc(EsysFlutterSharePlugin)
+public class EsysFlutterSharePlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "channel:github.com/orgs/esysberlin/esys-flutter-share", binaryMessenger: registrar.messenger())
-        let instance = SwiftEsysFlutterSharePlugin()
+        let instance = EsysFlutterSharePlugin()
         
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
